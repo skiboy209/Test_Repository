@@ -1,7 +1,7 @@
 
 //$(document).ready() is cross-browser
 //Runs script to initialize jquery functionality.
-$(document).ready(function() {
+$(window).on("load", function() {
   var home = "<p class='component'>Ground breaking solutions built with quality and integrity</p>"
   var about = "<p class='component'>Burns Excavation was founded on the principle of creating </p><p class='component'> quality excavation solutions fulfilled with integrity.</p>"
   var services = "<p class='component'>We provide excavation solutions for all your building needs.</p><p class='component'> From the driveway to the foundation </p>"
