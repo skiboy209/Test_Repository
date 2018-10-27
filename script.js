@@ -11,15 +11,19 @@ $(document).ready(function() {
   var aboutImg = "<img class='componentImg' src='assets/foundationcut4Optimized.jpg'/>"
   var servicesImg = "<img class='componentImg' src='assets/driveway2Optimized.jpg'/>"
   var employmentImg = "<img class='componentImg' src='assets/foundationcut3Optimized.jpg'/>"
-  var contactImg = "<img class='componentImg' src='assets/foundationcut3Optimized.jpg'/>"
+  var contactImg = "<img class='componentImg' src='assets/driveway3Optimized.jpg'/>"
+  var galleryTxt = "<p class='component'>Click the image to cycle through the gallery!</p>"
   
   var gallery = [
     homeImg,
     servicesImg,
     employmentImg,
-    contactImg
+    contactImg,
   ]
 
+  var test = 'componentImg';
+  var idx = 0;
+  
   //Content Displayer
     $("#componentDisplay").html(home);
     $("#componentDisplay2").html(homeImg);        
@@ -41,12 +45,24 @@ $(document).ready(function() {
       });
       $( "#contact" ).click(function() {
         $("#componentDisplay").html(contact);        
-        $("#componentDisplay2").html(contactImg);        
+        $("#componentDisplay2").html(contactImg);  
+        for(var i = 0; i < gallery.length; i++){
+          $("#componentDisplay").remove(test);
+        }      
       });
       $( "#gallery" ).click(function() {
-        for(var i = 0; i < gallery.length - 1; i++){
-          $("#componentDisplay").after(gallery[i]);
-        }
+        $( "#componentDisplay" ).html(gallery[0]);
+        $( "#componentDisplay2" ).html(galleryTxt)
+        $( "#componentDisplay" ).click(function(){
+          if(idx >= gallery.length - 1){
+            idx = 0;
+            $( "#componentDisplay" ).html(gallery[idx])
+          }else{
+            idx++;
+            console.log(idx);
+            $( "#componentDisplay" ).html(gallery[idx])
+          }
+        })
       })
 });
 
