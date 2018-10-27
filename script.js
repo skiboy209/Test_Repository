@@ -44,29 +44,26 @@ $(document).ready( function() {
   
   //Content Displayer
     $("#componentDisplay").html(home);
-    $("#componentDisplay2").html(homeImg);        
+    $("#componentDisplay2").html(images[0]);        
     $( "#home" ).click(function() {
         $("#componentDisplay").html(home);        
-        $("#componentDisplay2").html(homeImg);        
+        $("#componentDisplay2").html(images[0]);        
       });
       $( "#about" ).click(function() {
         $("#componentDisplay").html(about);        
-        $("#componentDisplay2").html(aboutImg);        
+        $("#componentDisplay2").html(images[1]);        
       });
       $( "#services" ).click(function() {
         $("#componentDisplay").html(services);        
-        $("#componentDisplay2").html(servicesImg);        
+        $("#componentDisplay2").html(images[2]);        
       });
       $( "#employment" ).click(function() {
         $("#componentDisplay").html(employment);        
-        $("#componentDisplay2").html(employmentImg);        
+        $("#componentDisplay2").html(images[3]);        
       });
       $( "#contact" ).click(function() {
         $("#componentDisplay").html(contact);        
-        $("#componentDisplay2").html(contactImg);  
-        for(var i = 0; i < gallery.length; i++){
-          $("#componentDisplay").remove(test);
-        }      
+        $("#componentDisplay2").html(images[4]);  
       });
       $( "#gallery" ).click(function() {
         $( "#componentDisplay" ).html(images[0]);
