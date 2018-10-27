@@ -19,6 +19,7 @@ $(document).ready( function() {
   function preload() {
     for (i = 0; i < preload.arguments.length; i++) {
       images[i] = new Image()
+      images[i].className = "componentImg"
       images[i].src = preload.arguments[i]
     }
   }

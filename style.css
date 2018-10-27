@@ -112,7 +112,7 @@ body{
 
 @media all and (max-width: 600px) {
   .componentImg{
-      width:420px;
+      width:300px;
   }
   .navigation {
     -webkit-flex-flow: column wrap;
