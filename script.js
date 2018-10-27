@@ -3,7 +3,7 @@
 //Runs script to initialize jquery functionality.
 $(document).ready(function(){
   $("#componentDisplay").html("<img src='assets/loading.gif'/>");
-  $("#componentDisplay2").html("<p>TEST</p>")
+  $("#componentDisplay2").html("<p>LOADING</p>")
 $(window).on("load", function() {
   var home = "<p class='component'>Ground breaking solutions built with quality and integrity</p>"
   var about = "<p class='component'>Burns Excavation was founded on the principle of creating </p><p class='component'> quality excavation solutions fulfilled with integrity.</p>"
