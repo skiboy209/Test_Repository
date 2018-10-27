@@ -135,6 +135,9 @@ body{
   #componentDisplay{
       height:100vh;
   }
+  .footer{
+      width:100%;
+  }
 }
 
 .wrapper {
