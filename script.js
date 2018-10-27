@@ -1,6 +1,6 @@
 
 //$(document).ready() is cross-browser
-//Runs script to initialize jquery functionality
+//Runs script to initialize jquery functionality.
 $(document).ready(function() {
   var home = "<p class='component'>Ground breaking solutions built with quality and integrity</p>"
   var about = "<p class='component'>Burns Excavation was founded on the principle of creating </p><p class='component'> quality excavation solutions fulfilled with integrity.</p>"
@@ -13,7 +13,13 @@ $(document).ready(function() {
   var employmentImg = "<img class='componentImg' src='assets/foundationcut3Optimized.jpg'/>"
   var contactImg = "<img class='componentImg' src='assets/foundationcut3Optimized.jpg'/>"
   
-  
+  var gallery = [
+    homeImg,
+    servicesImg,
+    employmentImg,
+    contactImg
+  ]
+
   //Content Displayer
     $("#componentDisplay").html(home);
     $("#componentDisplay2").html(homeImg);        
@@ -37,5 +43,10 @@ $(document).ready(function() {
         $("#componentDisplay").html(contact);        
         $("#componentDisplay2").html(contactImg);        
       });
+      $( "#gallery" ).click(function() {
+        for(var i = 0; i < gallery.length - 1; i++){
+          $("#componentDisplay").after(gallery[i]);
+        }
+      })
 });
 
