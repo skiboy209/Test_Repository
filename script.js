@@ -14,6 +14,23 @@ $(window).on("load", function() {
   var contactImg = "<img class='componentImg' src='assets/driveway3Optimized.jpg'/>"
   var galleryTxt = "<p class='component'>Click the image to cycle through the gallery!</p>"
   
+  var images = new Array()
+  function preload() {
+    for (i = 0; i < preload.arguments.length; i++) {
+      images[i] = new Image()
+      images[i].src = preload.arguments[i]
+    }
+  }
+  preload(
+    "assets/drivewayOptimized.jpg",
+    "assets/driveway2Optimized.jpg",
+    "assets/driveway3Optimized.jpg",
+    "assets/foundationcut3Optimized.jpg",
+    "assets/foundationcut2Optimized.jpg",
+    "assets/foundationcut4Optimized.jpg",
+    "assets/foundationcutOptimized.jpg"
+  )
+
   var gallery = [
     homeImg,
     servicesImg,
@@ -51,16 +68,16 @@ $(window).on("load", function() {
         }      
       });
       $( "#gallery" ).click(function() {
-        $( "#componentDisplay" ).html(gallery[0]);
+        $( "#componentDisplay" ).html(images[0]);
         $( "#componentDisplay2" ).html(galleryTxt)
         $( "#componentDisplay" ).click(function(){
           if(idx >= gallery.length - 1){
             idx = 0;
-            $( "#componentDisplay" ).html(gallery[idx])
+            $( "#componentDisplay" ).html(images[idx])
           }else{
             idx++;
             console.log(idx);
-            $( "#componentDisplay" ).html(gallery[idx])
+            $( "#componentDisplay" ).html(images[idx])
           }
         })
       })
