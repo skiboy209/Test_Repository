@@ -48,23 +48,23 @@ $(window).on("load", function() {
     $("#componentDisplay2").html(images[0]);        
     $( "#home" ).click(function() {
         $("#componentDisplay").html(home);        
-        $("#componentDisplay2").html(images[1]);        
+        $("#componentDisplay2").html(images[0]);        
       });
       $( "#about" ).click(function() {
         $("#componentDisplay").html(about);        
-        $("#componentDisplay2").html(images[2]);        
+        $("#componentDisplay2").html(images[1]);        
       });
       $( "#services" ).click(function() {
         $("#componentDisplay").html(services);        
-        $("#componentDisplay2").html(images[3]);        
+        $("#componentDisplay2").html(images[2]);        
       });
       $( "#employment" ).click(function() {
         $("#componentDisplay").html(employment);        
-        $("#componentDisplay2").html(images[4]);        
+        $("#componentDisplay2").html(images[3]);        
       });
       $( "#contact" ).click(function() {
         $("#componentDisplay").html(contact);        
-        $("#componentDisplay2").html(images[5]);  
+        $("#componentDisplay2").html(images[4]);  
         for(var i = 0; i < gallery.length; i++){
           $("#componentDisplay").remove(test);
         }      
