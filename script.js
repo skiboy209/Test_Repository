@@ -41,7 +41,8 @@ $(document).ready(function(){
 
   var test = 'componentImg';
   var idx = 0;
-  
+});
+$(window).on("load", function() {
   //Content Displayer
     $("#componentDisplay").html(home);
     $("#componentDisplay2").html(images[0]);        
