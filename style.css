@@ -132,6 +132,9 @@ body{
   #logoImg{
       height:100px;
   }
+  #componentDisplay{
+      height:100vh;
+  }
 }
 
 .wrapper {
