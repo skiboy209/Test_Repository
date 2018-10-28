@@ -61,9 +61,11 @@ $(document).ready( function() {
         $( "#componentDisplay2" ).html(galleryTxt)
       })
       $( "#gallery" ).ready(function(){
+        console.log(images.length)
         $( "#componentDisplay" ).click(function(){
           if(idx >= images.length - 1){
             idx = 0;
+            console.log("conditional tripped");
             $( "#componentDisplay" ).html(images[idx])
           }else{
             idx++;
