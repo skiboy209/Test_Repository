@@ -69,6 +69,8 @@ $(document).ready( function() {
       $( "#gallery" ).click(function() {
         $( "#componentDisplay" ).html(images[0]);
         $( "#componentDisplay2" ).html(galleryTxt)
+      })
+      $( "#gallery" ).ready(function(){
         $( "#componentDisplay" ).click(function(){
           if(idx >= gallery.length - 1){
             idx = 0;
