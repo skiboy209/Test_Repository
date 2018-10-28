@@ -68,6 +68,7 @@ $(document).ready( function() {
             $( "#componentDisplay" ).html(images[idx])
           }else{
             idx++;
+            console.log("INDEX: " + idx);
             $( "#componentDisplay" ).html(images[idx])
           }
         })
