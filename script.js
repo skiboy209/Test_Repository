@@ -67,7 +67,7 @@ $(document).ready( function() {
             console.log("conditional tripped");
             $( "#componentDisplay" ).html(images[idx])
           }else{
-        console.log(images.length)
+        console.log("TEST")
             idx++;
             $( "#componentDisplay" ).html(images[idx])
           }
