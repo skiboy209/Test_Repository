@@ -14,9 +14,6 @@ body{
 #footerList{
     list-style-type: none;
 }
-#companyLogo{
-    max-width: 80%;
-}
 #navBar{
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
