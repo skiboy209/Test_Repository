@@ -27,8 +27,8 @@ $(document).ready( function() {
     "assets/foundationcut2Optimized.jpg",
     "assets/foundationcut4Optimized.jpg",
     "assets/foundationcutOptimized.jpg",
-    "assets/utilitiesOptimized.jpg",
-    "assets/utilities2Optimized.jpg"
+    "assets/utilitiesOptimized.png",
+    "assets/utilities2Optimized.png"
   )
 
   var idx = 0;
@@ -64,10 +64,8 @@ $(document).ready( function() {
         $( "#componentDisplay" ).click(function(){
           if(idx >= images.length - 1){
             idx = 0;
-            console.log("conditional tripped");
             $( "#componentDisplay" ).html(images[idx])
           }else{
-        console.log("TEST")
             idx++;
             $( "#componentDisplay" ).html(images[idx])
           }
