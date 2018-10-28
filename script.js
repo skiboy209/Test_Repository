@@ -27,8 +27,9 @@ $(document).ready( function() {
     "assets/foundationcut2Optimized.jpg",
     "assets/foundationcut4Optimized.jpg",
     "assets/foundationcutOptimized.jpg",
-    "assets/utilitiesOptimized.png",
-    "assets/utilities2Optimized.png"
+    "assets/utilitiesOptimized.jpg",
+    "assets/utilities2Optimized.jpg",
+    "assets/utilities3Optimized.jpg"
   )
 
   var idx = 0;
@@ -62,7 +63,7 @@ $(document).ready( function() {
       })
       $( "#gallery" ).ready(function(){
         $( "#componentDisplay" ).click(function(){
-          if(idx >= images.length - 1){
+          if(idx >= images.length){
             idx = 0;
             $( "#componentDisplay" ).html(images[idx])
           }else{
