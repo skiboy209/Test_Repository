@@ -60,7 +60,7 @@ body{
     padding: 10px;
 }
 .navItem{
-    display: inline-block;
+    display: flex;
     padding: 10px 10px 10px 10px;
     
 }.navItem:hover{
@@ -172,7 +172,7 @@ body{
         margin:0;
     }
     #logoImg{
-        height:20px;
+        height:93px;
     }
     #componentDisplay{
         height:100vh;
