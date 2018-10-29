@@ -35,9 +35,15 @@ $(document).ready( function() {
 
   var idx = 0;
   
-  //Content Displayer
+  // border state on page change $( "#home" ).css({"border-bottom":"3px solid #ff0000","padding-bottom":"7px"})       
+  //Content Displayer 
   $("#componentDisplay2").html(home);
-    $("#componentDisplay").html(images[7]);        
+    $("#componentDisplay").html(images[7]);       
+    $("#logoImg").click(function() {
+      $( "#componentDisplay" ).off('click');
+      $("#componentDisplay").html(images[7]);        
+      $("#componentDisplay2").html(home);   
+    }); 
     $( "#home" ).click(function() {
       $( "#componentDisplay" ).off('click');
       $("#componentDisplay").html(images[7]);        
