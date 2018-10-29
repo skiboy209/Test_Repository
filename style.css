@@ -52,10 +52,6 @@ body{
 .component{
     padding: 10px 10px;
 }
-#componentDisplay{
-    margin: 10px 0;
-    height: 100vh;
-}
 
 .componentImg{
     padding: 10px;
@@ -113,6 +109,10 @@ body{
 }
 .main{
     background-color:darkgrey;
+}
+#componentDisplay{
+    margin: 10px 0;
+    height:100vh;
 }
 .footer{
       display:flex;
