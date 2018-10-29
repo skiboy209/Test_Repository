@@ -1,8 +1,8 @@
 html{
     height: 100vh;
-    background-color:#E8DFBD;  
+    background-color:#1d1e22;  
     /*width: 100%;*/
-    color:#322229;
+    color:#d4d4dc;
 }
 body{
     margin: 0;
@@ -19,7 +19,7 @@ body{
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */   
-    color:#322229;
+    color:#d4d4dc;
     display:flex;
     justify-content: flex-end;
 }#navBar:hover{
@@ -27,7 +27,7 @@ body{
 }
 #navStyle{
     list-style-type: none;
-    background-color:#99897D;
+    background-color:#1d1e22;
     padding: 0;
     margin: 0;
 }
@@ -36,12 +36,13 @@ body{
 }
 
 .componentImg{
-    padding: 10px;
+    padding: 0px;
     width:300px;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */   
+    border:3px solid #1d1e22;
 }
 .navItem{
     display: flex;
@@ -49,7 +50,7 @@ body{
     
 }.navItem:hover{
     padding-bottom: 7px;
-    border-bottom:3px solid #E8492D;
+    border-bottom:3px solid #feda6a;
 }
 
 /*Flexbox*/
@@ -60,7 +61,7 @@ body{
     display: flex;
     flex-flow: row wrap;
     height: 100vh;
-    background-color:#E8DFBD;
+    background-color:#393f4d;
   }
   
   /* We tell all items to be 100% width, via flex-basis */
@@ -71,7 +72,7 @@ body{
   .header{
     display:flex;
     justify-content: flex-end;    
-    background-color:#99897D;
+    background-color:#1d1e22;
   }
 .navigation {
     list-style: none;
@@ -87,10 +88,10 @@ body{
     justify-content: flex-end;
   }
 .aside{
-    background-color:#E8DFBD;
+    background-color:#393f4d;
 }
 .main{
-    background-color:#E8DFBD;
+    background-color:#393f4d;
 }
 #componentDisplay{
     margin: 10px 0;
@@ -99,7 +100,7 @@ body{
 .footer{
       display:flex;
       justify-content:flex-start;
-      background-color:#99897D;
+      background-color:#1d1e22;
 }
   
   /* We rely on source order for mobile-first approach
