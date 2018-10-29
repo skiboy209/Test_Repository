@@ -54,10 +54,16 @@ body{
 }
 #componentDisplay{
     margin: 10px 0;
+    height: 100vh;
 }
 
 .componentImg{
     padding: 10px;
+    width:300px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */   
 }
 .navItem{
     display: flex;
@@ -69,7 +75,9 @@ body{
 }
 
 /*Flexbox*/
-
+#logoImg{
+    height:100px;
+}
 .wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -110,7 +118,6 @@ body{
       display:flex;
       justify-content:flex-start;
       background-color:slategray;
-      padding-top: 20px;
 }
   
   /* We rely on source order for mobile-first approach
@@ -176,7 +183,7 @@ body{
         margin:10px 10px;
     }
     #logoImg{
-        height:11vh;
+        height:45px;
     }
     #componentDisplay{
         height:100vh;
