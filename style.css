@@ -166,7 +166,7 @@ body{
       border-bottom: none;
     }
     #virtualDom2{
-      display:none;
+      display:flex;
   }
     .component{
         margin:0;
