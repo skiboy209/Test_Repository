@@ -29,7 +29,8 @@ $(document).ready( function() {
     "assets/foundationcutOptimized.jpg",
     "assets/utilitiesOptimized.jpg",
     "assets/utilities2Optimized.jpg",
-    "assets/utilities3Optimized.jpg"
+    "assets/utilities3Optimized.jpg",
+    "assets/septicOptimized.jpg"
   )
 
   var idx = 0;
