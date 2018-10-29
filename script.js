@@ -36,27 +36,27 @@ $(document).ready( function() {
   var idx = 0;
   
   //Content Displayer
-    $("#componentDisplay").html(home);
-    $("#componentDisplay2").html(images[0]);        
+    $("#componentDisplay2").html(home);
+    $("#componentDisplay").html(images[0]);        
     $( "#home" ).click(function() {
-      $("#componentDisplay2").html(images[0]);        
-      $("#componentDisplay").html(home);        
+      $("#componentDisplay").html(images[0]);        
+      $("#componentDisplay2").html(home);        
       });
       $( "#about" ).click(function() {
-        $("#componentDisplay2").html(images[1]);        
-        $("#componentDisplay").html(about);        
+        $("#componentDisplay").html(images[1]);        
+        $("#componentDisplay2").html(about);        
       });
       $( "#services" ).click(function() {
-        $("#componentDisplay2").html(images[2]);        
-        $("#componentDisplay").html(services);        
+        $("#componentDisplay").html(images[2]);        
+        $("#componentDisplay2").html(services);        
       });
       $( "#employment" ).click(function() {
-        $("#componentDisplay2").html(images[3]);        
-        $("#componentDisplay").html(employment);        
+        $("#componentDisplay").html(images[3]);        
+        $("#componentDisplay2").html(employment);        
       });
       $( "#contact" ).click(function() {
-        $("#componentDisplay2").html(images[4]);  
-        $("#componentDisplay").html(contact);        
+        $("#componentDisplay").html(images[4]);  
+        $("#componentDisplay2").html(contact);        
       });
       $( "#gallery" ).click(function() {
         $( "#componentDisplay" ).html(images[0]);
