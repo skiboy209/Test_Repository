@@ -11,6 +11,18 @@ body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
+#contactList{
+    list-style-type: square;
+}
+.contactListItem{
+    padding: 10px 0px;
+}
+#servicesList{
+    list-style-type: square;
+}
+.serviceListItem{
+    padding: 10px 0px;
+}
 #footerList{
     list-style-type: none;
 }
