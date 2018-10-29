@@ -93,12 +93,6 @@ body{
 .main{
     background-color:#393f4d;
 }
-.virtualDom2{
-    display:flex;
-}
-.virtualDom{
-    display:flex;
-}
 #componentDisplay{
     margin: 10px 0;
     height:100vh;
@@ -143,15 +137,12 @@ body{
     .navigation {
       justify-content: space-around;
     }
+    .virtualDom2{
+      display:flex;
+  }
   }
   
   @media all and (max-width: 600px) {
-    .virtualDom2{
-        justify-content:space-around;
-    }
-    .virtualDom{
-        justify-content:space-around;
-    }
     .componentImg{
         width:300px;
         -webkit-user-select: none; /* Safari */        
@@ -169,13 +160,13 @@ body{
       border-bottom: none;
     }
     #virtualDom2{
-      display:flex;
+        display:flex;
     }
     .component{
         margin:10px 10px;
     }
     #logoImg{
-        height:66px;
+        height:46px;
     }
     #componentDisplay{
         height:100vh;
