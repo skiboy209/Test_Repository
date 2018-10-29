@@ -164,7 +164,7 @@ body{
         margin:10px 10px;
     }
     #logoImg{
-        height:46px;
+        height:66px;
     }
     #componentDisplay{
         height:100vh;
@@ -174,3 +174,8 @@ body{
     }
   
   }
+  @media all and (max-width: 320px) {
+    #logoImg{
+        height:46px;
+    }
+    }
