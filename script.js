@@ -36,25 +36,31 @@ $(document).ready( function() {
   var idx = 0;
   
   //Content Displayer
-    $("#componentDisplay2").html(home);
+  $( "#componentDisplay" ).off();
+  $("#componentDisplay2").html(home);
     $("#componentDisplay").html(images[0]);        
     $( "#home" ).click(function() {
+      $( "#componentDisplay" ).off();
       $("#componentDisplay").html(images[0]);        
       $("#componentDisplay2").html(home);        
       });
       $( "#about" ).click(function() {
+        $( "#componentDisplay" ).off();
         $("#componentDisplay").html(images[1]);        
         $("#componentDisplay2").html(about);        
       });
       $( "#services" ).click(function() {
+        $( "#componentDisplay" ).off();
         $("#componentDisplay").html(images[2]);        
         $("#componentDisplay2").html(services);        
       });
       $( "#employment" ).click(function() {
+        $( "#componentDisplay" ).off();
         $("#componentDisplay").html(images[3]);        
         $("#componentDisplay2").html(employment);        
       });
       $( "#contact" ).click(function() {
+        $( "#componentDisplay" ).off();
         $("#componentDisplay").html(images[4]);  
         $("#componentDisplay2").html(contact);        
       });
