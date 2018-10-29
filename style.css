@@ -1,8 +1,8 @@
 html{
     height: 100vh;
-    background-color:darkgrey;  
+    background-color:#E8DFBD;  
     /*width: 100%;*/
-    color:black;
+    color:#322229;
 }
 body{
     margin: 0;
@@ -19,7 +19,7 @@ body{
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */   
-    color:black;
+    color:#322229;
     display:flex;
     justify-content: flex-end;
 }#navBar:hover{
@@ -27,27 +27,9 @@ body{
 }
 #navStyle{
     list-style-type: none;
-    background-color:slategray;
+    background-color:#99897D;
     padding: 0;
     margin: 0;
-}
-#galleryNext{
-    margin-top: 20px;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-    cursor:pointer;
-    text-align:center;
-    width: 200px;
-    height: 40px;
-    background-color:black;
-    color:white;
-}#galleryNext:active{
-    background-color:black;
-    color:white;
-    padding:-3px -3px -3px -3px;
-    border: 3px solid orange;
 }
 .component{
     padding: 10px 10px;
@@ -67,7 +49,7 @@ body{
     
 }.navItem:hover{
     padding-bottom: 7px;
-    border-bottom:3px solid orange;
+    border-bottom:3px solid #E8492D;
 }
 
 /*Flexbox*/
@@ -78,7 +60,7 @@ body{
     display: flex;
     flex-flow: row wrap;
     height: 100vh;
-    background-color:darkgrey;
+    background-color:#E8DFBD;
   }
   
   /* We tell all items to be 100% width, via flex-basis */
@@ -89,7 +71,7 @@ body{
   .header{
     display:flex;
     justify-content: flex-end;    
-    background-color:slategray;
+    background-color:#99897D;
   }
 .navigation {
     list-style: none;
@@ -105,10 +87,10 @@ body{
     justify-content: flex-end;
   }
 .aside{
-    background-color:darkgrey;
+    background-color:#E8DFBD;
 }
 .main{
-    background-color:darkgrey;
+    background-color:#E8DFBD;
 }
 #componentDisplay{
     margin: 10px 0;
@@ -117,7 +99,7 @@ body{
 .footer{
       display:flex;
       justify-content:flex-start;
-      background-color:slategray;
+      background-color:#99897D;
 }
   
   /* We rely on source order for mobile-first approach
