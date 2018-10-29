@@ -39,24 +39,24 @@ $(document).ready( function() {
     $("#componentDisplay").html(home);
     $("#componentDisplay2").html(images[0]);        
     $( "#home" ).click(function() {
-        $("#componentDisplay").html(home);        
-        $("#componentDisplay2").html(images[0]);        
+      $("#componentDisplay2").html(images[0]);        
+      $("#componentDisplay").html(home);        
       });
       $( "#about" ).click(function() {
-        $("#componentDisplay").html(about);        
         $("#componentDisplay2").html(images[1]);        
+        $("#componentDisplay").html(about);        
       });
       $( "#services" ).click(function() {
-        $("#componentDisplay").html(services);        
         $("#componentDisplay2").html(images[2]);        
+        $("#componentDisplay").html(services);        
       });
       $( "#employment" ).click(function() {
-        $("#componentDisplay").html(employment);        
         $("#componentDisplay2").html(images[3]);        
+        $("#componentDisplay").html(employment);        
       });
       $( "#contact" ).click(function() {
-        $("#componentDisplay").html(contact);        
         $("#componentDisplay2").html(images[4]);  
+        $("#componentDisplay").html(contact);        
       });
       $( "#gallery" ).click(function() {
         $( "#componentDisplay" ).html(images[0]);
