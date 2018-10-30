@@ -8,7 +8,7 @@ $(document).ready( function() {
   var about = "<p class='component'>Burns Excavation was founded to bring you quality excavation solutions fulfilled with integrity.</p>"
   var services = "<p class='component'>We provide solutions for all your excavation needs.</p><ul id='servicesList'><li class='serviceListItem'>Site Development</li><li class='serviceListItem'>Clearing / Grading</li><li class='serviceListItem'>Drainage & More</li></ul>"
   var employment = "<p class='component'>Burns Excavation Employment</p><p class='component'> If you are seeking employment contact Jeff Burns, Owner at 360-878-3200</p>"
-  var contact = "<p class='component'>Contact Burns Excavation <ul id='contactList'><li class='contactListItem'>Email: jeffburns@burnsexcavation.com</li><li class='contactListItem'>Phone: 360-878-3200</li><li class='contactListItem'>Address: PO box coming soon!</li></ul></p>"
+  var contact = "<p class='component'>Contact Burns Excavation <ul id='contactList'><li class='contactListItem'>Email: jeffburns@burnsexcavation.com</li><li class='contactListItem'>Phone: 360-878-3200</li><li class='contactListItem'>Address: P.O. Box 1745 Silverdale, WA 9838</li></ul></p>"
   var galleryTxt = "<p class='component'>Click the image to view the next photo</p>"
 
   var speed = 3000;
