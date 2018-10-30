@@ -101,7 +101,7 @@ $(document).ready( function() {
       $( "#about" ).click(function() {    
         stopTimer();
         $( "#componentDisplay" ).off('click');
-        $("#componentDisplay").html(images[0])
+        $("#componentDisplay").html(images[1])
         $("#componentDisplay2").html(about);        
       });
       $( "#services" ).click(function() {
