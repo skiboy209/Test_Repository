@@ -3,6 +3,7 @@ html{
     background-color:#1d1e22;  
     /*width: 100%;*/
     color:#d4d4dc;
+    outline: none;
 }
 body{
     margin: 0;
@@ -49,6 +50,7 @@ body{
 
 .componentImg{
     padding: 0px;
+    margin-bottom:10px;
     width:520px;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -109,7 +111,6 @@ body{
 #componentDisplay{
     margin: 10px 0;
     height:100vh;
-    width: 520px;
 }
 .footer{
       display:flex;

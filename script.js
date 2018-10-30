@@ -17,19 +17,30 @@ $(document).ready( function() {
   resetTimer();
 
   function startTimer() {
-   //debug console.log("start timer ran")
-    if(idx >= images.length - 1){
+   //debug console.log("start timer ran") 0 3 4 5 15
+    if(idx >= images.length - 8){
+      console.log("THIS IS THE TRIGGER TO RESET THEM IMAGES " + idx)
       idx = 0;
       $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
         $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
       });
-    }else{
-    idx++;
+    }
+    /*else if(idx === 0 || idx === 2 || idx === 3 || idx === 4 || idx === 14){
+      console.log("idx premutation: " + idx);
+      $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
+      idx++;
+      $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
+      console.log("should skip photo: " + idx);
+      });
+    }*/
+    else{
+    console.log("IDX DISPLAYER " + idx)
       $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
         $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
       //Debug  console.log("Should change image. Idx should be + 1: " + idx)
       });
     }
+    idx++;  
   }
     
   function stopTimer() {
@@ -50,12 +61,8 @@ $(document).ready( function() {
     }
   }
   preload(
-    "assets/clearingOptimized.jpg",
     "assets/clearing2Optimized.jpg",
     "assets/clearing3Optimized.jpg",
-    "assets/clearing4Optimized.jpg",
-    "assets/clearing5Optimized.jpg",
-    "assets/clearing6Optimized.jpg",
     "assets/foundationcut11Optimized.jpg",
     "assets/foundationcut12Optimized.jpg",
     "assets/foundationcut13Optimized.jpg",
@@ -65,7 +72,14 @@ $(document).ready( function() {
     "assets/septic17Optimized.jpg",
     "assets/septic18Optimized.jpg",
     "assets/septic19Optimized.jpg",
+    "assets/clearingOptimized.jpg",
+    "assets/clearing4Optimized.jpg",
+    "assets/clearing5Optimized.jpg",
+    "assets/clearing6Optimized.jpg",
+    "assets/drainage7Optimized.jpg",
+    "assets/drainage8Optimized.jpg",
     "assets/septic20Optimized.jpg"
+
   )
   
   // border state on page change $( "#home" ).css({"border-bottom":"3px solid #ff0000","padding-bottom":"7px"})       
@@ -85,7 +99,7 @@ $(document).ready( function() {
       $( "#about" ).click(function() {    
         stopTimer();
         $( "#componentDisplay" ).off('click');
-        $("#componentDisplay").html(images[1])
+        $("#componentDisplay").html(images[0])
         $("#componentDisplay2").html(about);        
       });
       $( "#services" ).click(function() {
@@ -108,14 +122,15 @@ $(document).ready( function() {
       });
       $( "#gallery" ).click(function() {
         stopTimer();
-        $( "#componentDisplay" ).html(images[5])
+        $( "#componentDisplay" ).html(images[11])
         $( "#componentDisplay2" ).html(galleryTxt)
 
         //Gallery logic
         console.log("Gallery logic bound to image")
         $( "#componentDisplay" ).on('click', function(){
+          idx = 11;
           if(idx >= images.length - 1){
-            idx = 0;
+            idx = 11;
             $( "#componentDisplay" ).fadeOut("fast", "swing", function(){
               $( "#componentDisplay" ).html(images[idx]).fadeIn("fast", "swing");
             });
