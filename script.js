@@ -62,23 +62,23 @@ $(document).ready( function() {
     }
   }
   preload(
-    "assets/clearing2Optimized.jpg",
-    "assets/clearing3Optimized.jpg",
-    "assets/foundationcut11Optimized.jpg",
-    "assets/foundationcut12Optimized.jpg",
-    "assets/foundationcut13Optimized.jpg",
-    "assets/foundationcut14Optimized.jpg",
-    "assets/septic15Optimized.jpg",
-    "assets/septic16Optimized.jpg",
-    "assets/septic17Optimized.jpg",
-    "assets/septic18Optimized.jpg",
-    "assets/septic19Optimized.jpg",
-    "assets/clearing4Optimized.jpg",
-    "assets/clearing5Optimized.jpg",
-    "assets/clearing6Optimized.jpg",
-    "assets/drainage7Optimized.jpg",
-    "assets/drainage8Optimized.jpg",
-    "assets/septic20Optimized.jpg"
+    "../assets/clearing2Optimized.jpg",
+    "../assets/clearing3Optimized.jpg",
+    "../assets/foundationcut11Optimized.jpg",
+    "../assets/foundationcut12Optimized.jpg",
+    "../assets/foundationcut13Optimized.jpg",
+    "../assets/foundationcut14Optimized.jpg",
+    "../assets/septic15Optimized.jpg",
+    "../assets/septic16Optimized.jpg",
+    "../assets/septic17Optimized.jpg",
+    "../assets/septic18Optimized.jpg",
+    "../assets/septic19Optimized.jpg",
+    "../assets/clearing4Optimized.jpg",
+    "../assets/clearing5Optimized.jpg",
+    "../assets/clearing6Optimized.jpg",
+    "../assets/drainage7Optimized.jpg",
+    "../assets/drainage8Optimized.jpg",
+    "../assets/septic20Optimized.jpg"
 
   )
   
@@ -87,12 +87,14 @@ $(document).ready( function() {
   $("#componentDisplay2").html(home);
   $("#componentDisplay").html(images[0]);       
   $("#logoImg").click(function() {
+    history.pushState(null, null, 'http://www.burnsexcavation.com/home');
     $("#componentDisplay").html(images[0]);       
       $( "#componentDisplay" ).off('click');
       resetTimer();
       $("#componentDisplay2").html(home);   
     }); 
     $( "#home" ).click(function() {
+      history.pushState(null, null, 'http://www.burnsexcavation.com/home');
       $("#componentDisplay").html(images[0]);       
       resetTimer();
       $( "#componentDisplay" ).off('click');
@@ -100,24 +102,28 @@ $(document).ready( function() {
       });
       $( "#about" ).click(function() {    
         stopTimer();
+        history.pushState(null, null, 'http://www.burnsexcavation.com/about');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[1])
         $("#componentDisplay2").html(about);        
       });
       $( "#services" ).click(function() {
         stopTimer();
+        history.pushState(null, null, 'http://www.burnsexcavation.com/services');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[2])    
         $("#componentDisplay2").html(services);        
       });
       $( "#employment" ).click(function() {
         stopTimer();        
+        history.pushState(null, null, 'http://www.burnsexcavation.com/employment');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[3])       
         $("#componentDisplay2").html(employment);        
       });
       $( "#contact" ).click(function() {
         stopTimer();      
+        history.pushState(null, null, 'http://www.burnsexcavation.com/contact');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[4]) 
         $("#componentDisplay2").html(contact);        
@@ -125,6 +131,7 @@ $(document).ready( function() {
       $( "#gallery" ).click(function() {
         idx = 11;
         stopTimer();
+        history.pushState(null, null, 'http://www.burnsexcavation.com/gallery/');
         $( "#componentDisplay" ).html(images[11])
         $( "#componentDisplay2" ).html(galleryTxt)
 
