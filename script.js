@@ -18,7 +18,7 @@ $(document).ready( function() {
 
   function startTimer() {
    //debug console.log("start timer ran") 0 3 4 5 15
-    if(idx >= images.length - 8){
+    if(idx >= images.length - 7){
       console.log("THIS IS THE TRIGGER TO RESET THEM IMAGES " + idx)
       idx = 0;
       $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
@@ -36,7 +36,7 @@ $(document).ready( function() {
     else{
     console.log("IDX DISPLAYER " + idx)
       $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
-        $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
+      $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
       //Debug  console.log("Should change image. Idx should be + 1: " + idx)
       });
     }
@@ -48,6 +48,7 @@ $(document).ready( function() {
   } 
 
   function resetTimer() {
+    idx = 0;
     stopTimer();
     timer = setInterval(startTimer, speed);
   }
@@ -72,7 +73,6 @@ $(document).ready( function() {
     "assets/septic17Optimized.jpg",
     "assets/septic18Optimized.jpg",
     "assets/septic19Optimized.jpg",
-    "assets/clearingOptimized.jpg",
     "assets/clearing4Optimized.jpg",
     "assets/clearing5Optimized.jpg",
     "assets/clearing6Optimized.jpg",
@@ -85,13 +85,15 @@ $(document).ready( function() {
   // border state on page change $( "#home" ).css({"border-bottom":"3px solid #ff0000","padding-bottom":"7px"})       
   //Content Displayer 
   $("#componentDisplay2").html(home);
+  $("#componentDisplay").html(images[0]);       
+  $("#logoImg").click(function() {
     $("#componentDisplay").html(images[0]);       
-    $("#logoImg").click(function() {
       $( "#componentDisplay" ).off('click');
       resetTimer();
       $("#componentDisplay2").html(home);   
     }); 
     $( "#home" ).click(function() {
+      $("#componentDisplay").html(images[0]);       
       resetTimer();
       $( "#componentDisplay" ).off('click');
       $("#componentDisplay2").html(home);        
@@ -121,6 +123,7 @@ $(document).ready( function() {
         $("#componentDisplay2").html(contact);        
       });
       $( "#gallery" ).click(function() {
+        idx = 11;
         stopTimer();
         $( "#componentDisplay" ).html(images[11])
         $( "#componentDisplay2" ).html(galleryTxt)
@@ -128,7 +131,6 @@ $(document).ready( function() {
         //Gallery logic
         console.log("Gallery logic bound to image")
         $( "#componentDisplay" ).on('click', function(){
-          idx = 11;
           if(idx >= images.length - 1){
             idx = 11;
             $( "#componentDisplay" ).fadeOut("fast", "swing", function(){
@@ -136,6 +138,7 @@ $(document).ready( function() {
             });
           }else{
             idx++;
+            console.log("Index display" + idx);
             $( "#componentDisplay" ).fadeOut("fast", "swing", function(){
               $( "#componentDisplay" ).html(images[idx]).fadeIn("fast", "swing");
             });
