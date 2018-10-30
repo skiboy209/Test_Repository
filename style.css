@@ -159,6 +159,9 @@ body{
     body{
         text-align:center;
     }
+    .footer{
+        text-align:left;
+    }
     .componentImg{
         width:300px;
         -webkit-user-select: none; /* Safari */        
@@ -193,6 +196,9 @@ body{
 @media all and (max-width: 320px) {
     body{
         text-align:center;
+    }
+    .footer{
+        text-align:left;
     }
     #logoImg{
         height:46px;
