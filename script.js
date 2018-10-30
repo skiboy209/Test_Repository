@@ -78,11 +78,14 @@ $(document).ready( function() {
         $( "#componentDisplay" ).on('click', function(){
           if(idx >= images.length - 1){
             idx = 0;
-            $( "#componentDisplay" ).html(images[idx])
+            $( "#componentDisplay" ).fadeOut("fast", "swing", function(){
+              $( "#componentDisplay" ).html(images[idx]).fadeIn("fast", "swing");
+            });
           }else{
             idx++;
-            console.log("INDEX: " + idx);
-            $( "#componentDisplay" ).html(images[idx])
+            $( "#componentDisplay" ).fadeOut("fast", "swing", function(){
+              $( "#componentDisplay" ).html(images[idx]).fadeIn("fast", "swing");
+            });
           }
         })
       })
