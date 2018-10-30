@@ -3,6 +3,7 @@
 //Runs script to initialize jquery functionality.
 
 $(document).ready( function() {
+  var idx = 0;
   var home = "<p class='component'>We provide ground breaking solutions crafted with quality and integrity</p>"
   var about = "<p class='component'>Burns Excavation was founded to bring you quality excavation solutions fulfilled with integrity.</p>"
   var services = "<p class='component'>We provide solutions for all your excavation needs.</p><ul id='servicesList'><li class='serviceListItem'>Site Development</li><li class='serviceListItem'>Clearing / Grading</li><li class='serviceListItem'>Drainage & More</li></ul>"
@@ -10,6 +11,35 @@ $(document).ready( function() {
   var contact = "<p class='component'>Contact Burns Excavation <ul id='contactList'><li class='contactListItem'>Email: jeffburns@burnsexcavation.com</li><li class='contactListItem'>Phone: 360-878-3200</li><li class='contactListItem'>Address: PO box coming soon!</li></ul></p>"
   var galleryTxt = "<p class='component'>Click the image to view the next photo</p>"
 
+  var speed = 3000;
+  var fadeSpeed = 500;
+  var timer;
+  resetTimer();
+
+  function startTimer() {
+   //debug console.log("start timer ran")
+    if(idx >= images.length - 1){
+      idx = 0;
+      $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
+        $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
+      });
+    }else{
+    idx++;
+      $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
+        $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
+      //Debug  console.log("Should change image. Idx should be + 1: " + idx)
+      });
+    }
+  }
+    
+  function stopTimer() {
+    clearInterval(timer);
+  } 
+
+  function resetTimer() {
+    stopTimer();
+    timer = setInterval(startTimer, speed);
+  }
 
   var images = new Array()
   function preload() {
@@ -20,57 +50,65 @@ $(document).ready( function() {
     }
   }
   preload(
-    "assets/drivewayOptimized.jpg",
-    "assets/driveway2Optimized.jpg",
-    "assets/driveway3Optimized.jpg",
-    "assets/foundationcut3Optimized.jpg",
-    "assets/foundationcut2Optimized.jpg",
-    "assets/foundationcut4Optimized.jpg",
-    "assets/foundationcutOptimized.jpg",
-    "assets/utilitiesOptimized.jpg",
-    "assets/utilities2Optimized.jpg",
-    "assets/utilities3Optimized.jpg",
-    "assets/septicOptimized.jpg"
+    "assets/clearingOptimized.jpg",
+    "assets/clearing2Optimized.jpg",
+    "assets/clearing3Optimized.jpg",
+    "assets/clearing4Optimized.jpg",
+    "assets/clearing5Optimized.jpg",
+    "assets/clearing6Optimized.jpg",
+    "assets/foundationcut11Optimized.jpg",
+    "assets/foundationcut12Optimized.jpg",
+    "assets/foundationcut13Optimized.jpg",
+    "assets/foundationcut14Optimized.jpg",
+    "assets/septic15Optimized.jpg",
+    "assets/septic16Optimized.jpg",
+    "assets/septic17Optimized.jpg",
+    "assets/septic18Optimized.jpg",
+    "assets/septic19Optimized.jpg",
+    "assets/septic20Optimized.jpg"
   )
-
-  var idx = 0;
   
   // border state on page change $( "#home" ).css({"border-bottom":"3px solid #ff0000","padding-bottom":"7px"})       
   //Content Displayer 
   $("#componentDisplay2").html(home);
-    $("#componentDisplay").html(images[7]);       
+    $("#componentDisplay").html(images[0]);       
     $("#logoImg").click(function() {
       $( "#componentDisplay" ).off('click');
-      $("#componentDisplay").html(images[7]);        
+      resetTimer();
       $("#componentDisplay2").html(home);   
     }); 
     $( "#home" ).click(function() {
+      resetTimer();
       $( "#componentDisplay" ).off('click');
-      $("#componentDisplay").html(images[7]);        
       $("#componentDisplay2").html(home);        
       });
       $( "#about" ).click(function() {    
+        stopTimer();
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[1])
         $("#componentDisplay2").html(about);        
       });
       $( "#services" ).click(function() {
+        stopTimer();
         $( "#componentDisplay" ).off('click');
-        $("#componentDisplay").html(images[9])    
+        $("#componentDisplay").html(images[2])    
         $("#componentDisplay2").html(services);        
       });
       $( "#employment" ).click(function() {
+        stopTimer();        
         $( "#componentDisplay" ).off('click');
-        $("#componentDisplay").html(images[8])       
+        $("#componentDisplay").html(images[3])       
         $("#componentDisplay2").html(employment);        
       });
       $( "#contact" ).click(function() {
+        stopTimer();      
         $( "#componentDisplay" ).off('click');
-        $("#componentDisplay").html(images[2]) 
+        $("#componentDisplay").html(images[4]) 
         $("#componentDisplay2").html(contact);        
       });
       $( "#gallery" ).click(function() {
-        $( "#componentDisplay" ).html(images[0])
+        stopTimer();
+        $( "#componentDisplay" ).html(images[5])
         $( "#componentDisplay2" ).html(galleryTxt)
 
         //Gallery logic
@@ -89,8 +127,4 @@ $(document).ready( function() {
           }
         })
       })
- /*     $( "#gallery" ).ready(function(){
-
-      })*/
 });
-
