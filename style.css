@@ -127,7 +127,7 @@ body{
 
   /* Media Queries */
   /* Medium screens */
-  @media all and (min-width: 600px) {
+  @media screen and (min-width: 600px) {
     /* We tell both sidebars to share a row */
     .aside { flex: 1 auto; padding:0 10px; }
     .main {margin-top:20px;}
@@ -135,7 +135,7 @@ body{
   }
 
   /* Large screens */
-  @media all and (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     /* We invert order of first sidebar and main
      * And tell the main element to take twice as much width as the other two sidebars 
      */
@@ -146,7 +146,7 @@ body{
     .footer  { order: 4;}
   }
 
-  @media all and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     .navigation {
       justify-content: space-around;
     }
@@ -155,7 +155,7 @@ body{
   }
   }
   
-  @media all and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     body{
         text-align:center;
     }
@@ -193,7 +193,7 @@ body{
     }
   
   }
-@media all and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     body{
         text-align:center;
     }
