@@ -104,6 +104,7 @@ body{
   }
 .aside{
     background-color:#393f4d;
+    height:800px;
 }
 .main{
     background-color:#393f4d;
@@ -158,6 +159,9 @@ body{
   }
   
   @media screen and (max-width: 600px) {
+    .aside{
+        height: 440px;
+    }
     body{
         text-align:center;
     }
@@ -198,6 +202,9 @@ body{
 @media screen and (min-width: 300px) and (max-width: 400px) {
     body{
         text-align:center;
+    }
+    .aside{
+        height: 440px;
     }
     .footer{
         text-align:left;
