@@ -183,7 +183,7 @@ body{
         margin:10px 10px;
     }
     #logoImg{
-        height:58px;
+        height:66px;
     }
     #componentDisplay{
         height:100vh;
@@ -193,7 +193,7 @@ body{
     }
   
   }
-@media all and (max-width: 320px) {
+@media all and (max-width: 400px) {
     body{
         text-align:center;
     }
