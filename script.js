@@ -4,12 +4,13 @@
 
 $(document).ready( function() {
   var idx = 0;
-  var home = "<p class='component'>We provide ground breaking solutions crafted with quality and integrity</p>"
-  var about = "<p class='component'>Burns Excavation was founded to bring you quality excavation solutions fulfilled with integrity.</p>"
-  var services = "<p class='component'>We provide solutions for all your excavation needs.</p><ul id='servicesList'><li class='serviceListItem'>Site Development</li><li class='serviceListItem'>Clearing / Grading</li><li class='serviceListItem'>Drainage & More</li></ul>"
-  var employment = "<p class='component'>Burns Excavation Employment</p><p class='component'> If you are seeking employment contact Jeff Burns, Owner at 360-878-3200</p>"
-  var contact = "<p class='component'>Contact Burns Excavation <ul id='contactList'><li class='contactListItem'>Email: jeffburns@burnsexcavation.com</li><li class='contactListItem'>Phone: 360-878-3200</li><li class='contactListItem'>Address: P.O. Box 1745 Silverdale, WA 9838</li></ul></p>"
   var galleryTxt = "<p class='component'>Click the image to view the next photo</p>"
+  var home = "home.html";
+  var about = "about.html";
+  var services = "services.html";
+  var employment = "employment.html";
+  var contact = "contact.html";
+
 
   var speed = 3000;
   var fadeSpeed = 500;
@@ -25,14 +26,6 @@ $(document).ready( function() {
         $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
       });
     }
-    /*else if(idx === 0 || idx === 2 || idx === 3 || idx === 4 || idx === 14){
-      console.log("idx premutation: " + idx);
-      $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
-      idx++;
-      $( "#componentDisplay" ).html(images[idx]).fadeIn(fadeSpeed, "swing");
-      console.log("should skip photo: " + idx);
-      });
-    }*/
     else{
     console.log("IDX DISPLAYER " + idx)
       $( "#componentDisplay" ).fadeOut(fadeSpeed, "swing", function(){
@@ -62,76 +55,75 @@ $(document).ready( function() {
     }
   }
   preload(
-    "../assets/clearing2Optimized.jpg",
-    "../assets/clearing3Optimized.jpg",
-    "../assets/foundationcut11Optimized.jpg",
-    "../assets/foundationcut12Optimized.jpg",
-    "../assets/foundationcut13Optimized.jpg",
-    "../assets/foundationcut14Optimized.jpg",
-    "../assets/septic15Optimized.jpg",
-    "../assets/septic16Optimized.jpg",
-    "../assets/septic17Optimized.jpg",
-    "../assets/septic18Optimized.jpg",
-    "../assets/septic19Optimized.jpg",
-    "../assets/clearing4Optimized.jpg",
-    "../assets/clearing5Optimized.jpg",
-    "../assets/clearing6Optimized.jpg",
-    "../assets/drainage7Optimized.jpg",
-    "../assets/drainage8Optimized.jpg",
-    "../assets/septic20Optimized.jpg"
-
+    "assets/clearing2Optimized.jpg",
+    "assets/clearing3Optimized.jpg",
+    "assets/foundationcut11Optimized.jpg",
+    "assets/foundationcut12Optimized.jpg",
+    "assets/foundationcut13Optimized.jpg",
+    "assets/foundationcut14Optimized.jpg",
+    "assets/septic15Optimized.jpg",
+    "assets/septic16Optimized.jpg",
+    "assets/septic17Optimized.jpg",
+    "assets/septic18Optimized.jpg",
+    "assets/septic19Optimized.jpg",
+    "assets/clearing4Optimized.jpg",
+    "assets/clearing5Optimized.jpg",
+    "assets/clearing6Optimized.jpg",
+    "assets/drainage7Optimized.jpg",
+    "assets/drainage8Optimized.jpg",
+    "assets/septic20Optimized.jpg"
   )
   
   // border state on page change $( "#home" ).css({"border-bottom":"3px solid #ff0000","padding-bottom":"7px"})       
   //Content Displayer 
-  $("#componentDisplay2").html(home);
+  $("#componentDisplay2").load(home);
   $("#componentDisplay").html(images[0]);       
   $("#logoImg").click(function() {
-    history.pushState(null, null, 'http://burnsexcavation.com/home');
+    //history.pushState(null, null, 'http://burnsexcavation.com/home');
     $("#componentDisplay").html(images[0]);       
       $( "#componentDisplay" ).off('click');
       resetTimer();
-      $("#componentDisplay2").html(home);   
+      $("#componentDisplay2").load(home);   
     }); 
     $( "#home" ).click(function() {
-      history.pushState(null, null, 'http://burnsexcavation.com/home');
+      //history.pushState(null, null, 'http://burnsexcavation.com/home');
       $("#componentDisplay").html(images[0]);       
       resetTimer();
       $( "#componentDisplay" ).off('click');
-      $("#componentDisplay2").html(home);        
+      $("#componentDisplay2").load(home);        
       });
       $( "#about" ).click(function() {    
         stopTimer();
-        history.pushState(null, null, 'http://burnsexcavation.com/about');
+        //history.pushState(null, null, 'http://burnsexcavation.com/about');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[1])
-        $("#componentDisplay2").html(about);        
+        $("#componentDisplay2").load(about);        
       });
       $( "#services" ).click(function() {
         stopTimer();
-        history.pushState(null, null, 'http://burnsexcavation.com/services');
+        //history.pushState(null, null, 'http://burnsexcavation.com/services');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[2])    
-        $("#componentDisplay2").html(services);        
+        $("#componentDisplay2").load(services);        
       });
       $( "#employment" ).click(function() {
         stopTimer();        
-        history.pushState(null, null, 'http://burnsexcavation.com/employment');
+        //history.pushState(null, null, 'http://burnsexcavation.com/employment');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[3])       
-        $("#componentDisplay2").html(employment);        
+        $("#componentDisplay2").load(employment);        
       });
       $( "#contact" ).click(function() {
         stopTimer();      
-        history.pushState(null, null, 'http://burnsexcavation.com/contact');
+        //history.pushState(null, null, 'http://burnsexcavation.com/contact');
         $( "#componentDisplay" ).off('click');
         $("#componentDisplay").html(images[4]) 
-        $("#componentDisplay2").html(contact);        
+        $("#componentDisplay2").load(contact);        
       });
       $( "#gallery" ).click(function() {
         idx = 11;
         stopTimer();
-        history.pushState(null, null, 'http://burnsexcavation.com/gallery');
+        //history.pushState(null, null, 'http://burnsexcavation.com/gallery');
         $( "#componentDisplay" ).html(images[11])
         $( "#componentDisplay2" ).html(galleryTxt)
 
